@@ -1,14 +1,17 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav opened mode="side" class="sidenav">
+  <mat-sidenav #sidenav opened mode="side" class="sidenav" [ngStyle.lt-md]="{'width': '80px'}">
     <mat-nav-list>
       <div class="sidebar-list">
         <a mat-list-item [routerLink]="'/home'">
-          <mat-icon class="iconify" data-icon="ic:baseline-home" data-inline="false"></mat-icon>
-          Home
+          <mat-icon aria-hidden="false" aria-label="Home"
+            [ngStyle.lt-md]="{'margin': '0 auto', 'padding-right': '0px', 'width': '24px'}">home</mat-icon>
+          <span fxHide.lt-md>Home</span>
         </a>
         <a mat-list-item [routerLink]="'/files'">
-          <mat-icon class="iconify" data-icon="ic:baseline-create-new-folder" data-inline="false"></mat-icon>
-          Files
+          <mat-icon aria-hidden="false" aria-label="File"
+            [ngStyle.lt-md]="{'margin': '0 auto', 'padding-right': '0px', 'width': '24px'}">create_new_folder
+          </mat-icon>
+          <span fxHide.lt-md>Files</span>
         </a>
       </div>
     </mat-nav-list>
@@ -17,7 +20,7 @@
     <mat-toolbar class="toolbar">
       <mat-toolbar-row>
         <button mat-icon-button (click)="sidenav.toggle()">
-          <mat-icon class="iconify" data-icon="ic:baseline-menu" data-inline="false"></mat-icon>
+          <mat-icon aria-hidden="false" aria-label="Menu">menu</mat-icon>
         </button>
       </mat-toolbar-row>
     </mat-toolbar>
