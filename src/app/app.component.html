@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav opened mode="side" class="sidenav" [ngStyle.lt-md]="{'width': '80px'}">
+  <mat-sidenav #sidenav opened mode="side" class="sidenav" [ngStyle.lt-md]="{'width': '80px'}" [opened]="isOpen">
     <mat-nav-list>
       <div class="sidebar-list">
         <a mat-list-item [routerLink]="'/home'">
@@ -19,7 +19,7 @@
   <mat-sidenav-content>
     <mat-toolbar class="toolbar">
       <mat-toolbar-row>
-        <button mat-icon-button (click)="sidenav.toggle()">
+        <button mat-icon-button (click)="toggleSideNav()">
           <mat-icon aria-hidden="false" aria-label="Menu">menu</mat-icon>
         </button>
       </mat-toolbar-row>
