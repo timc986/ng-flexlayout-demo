@@ -9,12 +9,18 @@ import { MediaObserver } from '@angular/flex-layout';
 })
 export class AppComponent {
   public isOpen = true;
+  private isOpenByClick = true;
+  private isOpenByAuto = true;
   private mediaSubscription;
 
   constructor(public mediaObserver: MediaObserver) {
     this.mediaSubscription = mediaObserver.asObservable().subscribe(changes => {
-      this.isOpen = (changes[0].mqAlias !== 'xs');
-      console.log(changes.map(c => c.mqAlias));
+      // console.log(changes.map(c => c.mqAlias));
+      this.isOpenByAuto = (changes[0].mqAlias !== 'xs');
+
+      if (this.isOpenByClick) {
+        this.isOpen = this.isOpenByAuto;
+      }
     });
   }
 
@@ -23,7 +29,8 @@ export class AppComponent {
   }
 
   toggleSideNav() {
-    this.isOpen = !this.isOpen;
+    this.isOpenByClick = !this.isOpenByClick;
+    this.isOpen = this.isOpenByClick;
   }
 
 }
