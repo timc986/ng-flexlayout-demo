@@ -1,17 +1,17 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav opened mode="side" class="sidenav" [ngStyle.lt-md]="{'width': '80px'}" [opened]="isOpen">
+  <mat-sidenav #sidenav opened mode="side" class="sidenav" [ngStyle.lt-lg]="{'width': '80px'}" [opened]="isOpen">
     <mat-nav-list>
       <div class="sidebar-list">
         <a mat-list-item [routerLink]="'/home'">
           <mat-icon aria-hidden="false" aria-label="Home"
-            [ngStyle.lt-md]="{'margin': '0 auto', 'padding-right': '0px', 'width': '24px'}">home</mat-icon>
-          <span fxHide.lt-md>Home</span>
+            [ngStyle.lt-lg]="{'margin': '0 auto', 'padding-right': '0px', 'width': '24px'}">home</mat-icon>
+          <span fxHide.lt-lg>Home</span>
         </a>
         <a mat-list-item [routerLink]="'/files'">
           <mat-icon aria-hidden="false" aria-label="File"
-            [ngStyle.lt-md]="{'margin': '0 auto', 'padding-right': '0px', 'width': '24px'}">create_new_folder
+            [ngStyle.lt-lg]="{'margin': '0 auto', 'padding-right': '0px', 'width': '24px'}">create_new_folder
           </mat-icon>
-          <span fxHide.lt-md>Files</span>
+          <span fxHide.lt-lg>Files</span>
         </a>
       </div>
     </mat-nav-list>
