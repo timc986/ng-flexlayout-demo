@@ -13,6 +13,12 @@ export class AppComponent {
   private mediaSubscription;
 
   constructor(public mediaObserver: MediaObserver) {
+
+    // xs is up to 599px
+    if (window.innerWidth < 600) {
+      this.isOpen = false;
+    }
+
     this.mediaSubscription = mediaObserver.asObservable().subscribe(changes => {
       // console.log(changes.map(c => c.mqAlias));
       this.isOpenByAuto = (changes[0].mqAlias !== 'xs');
