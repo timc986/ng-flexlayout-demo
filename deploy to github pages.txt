@@ -12,4 +12,4 @@ git commit -m "Add files"
 
 git push
 
-git checkout main
+git checkout master
