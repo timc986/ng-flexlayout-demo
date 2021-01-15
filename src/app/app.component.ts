@@ -17,6 +17,7 @@ export class AppComponent {
     // xs is up to 599px
     if (window.innerWidth < 600) {
       this.isOpen = false;
+      this.isOpenByClick = false;
     }
 
     this.mediaSubscription = mediaObserver.asObservable().subscribe(changes => {
@@ -35,7 +36,7 @@ export class AppComponent {
 
   toggleSideNav() {
     this.isOpenByClick = !this.isOpenByClick;
-    this.isOpen = this.isOpenByClick;
+    this.isOpen = !this.isOpen;
   }
 
 }
