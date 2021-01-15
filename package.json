@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-gh": "ng build --prod --baseHref=/ng-flexlayout-demo/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
