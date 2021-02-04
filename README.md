@@ -13,8 +13,8 @@ Website: https://timc986.github.io/ng-flexlayout-demo
 
 ## Screenshots
 
-![screenshot_big](readme_assets/screenshot_big.png)
+![screenshot_phone](readme_assets/phone_small.png)
 
 ![screenshot_medium](readme_assets/screenshot_medium.png)
 
-![screenshot_phone](readme_assets/screenshot_phone.png)
+![screenshot_big](readme_assets/screenshot_big.png)
