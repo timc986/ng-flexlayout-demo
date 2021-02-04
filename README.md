@@ -2,7 +2,7 @@
 
 A demo project for Angular Flex Layout with responsive UI design
 
-https://timc986.github.io/ng-flexlayout-demo
+Website: https://timc986.github.io/ng-flexlayout-demo
 
 ## Tech
 
